@@ -1,10 +1,10 @@
 import requests
 
-headers = {'X-ApiKey':'5a677cc2bf68c90dcc88234d/b6daea7e-8aba-4373-a5dd-795e4f6cfd95','Content-Type': 'application/json;charset=utf-8' }
+headers = {'X-ApiKey':'Your api key would be inserted here','Content-Type': 'application/json;charset=utf-8' }
 
 new_record = {
     "FieldData":{
-        "788":"Stuart Boi",
+        "788":"An important string of data",
         "789":"34"
     }
 }

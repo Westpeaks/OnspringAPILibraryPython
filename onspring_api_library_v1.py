@@ -6,7 +6,7 @@ class HttpHelper:
         self.host = host
         self.header = header
         
-host_key = HttpHelper("https://api.onspring.com", {'X-ApiKey' : '5a677cc2bf68c90dcc88234d/b6daea7e-8aba-4373-a5dd-795e4f6cfd95'})
+host_key = HttpHelper("https://api.onspring.com", {'X-ApiKey' : 'Your API Key would be inserted here'})
 
 def can_connect():
     host, header = host_key.host, host_key.header   
