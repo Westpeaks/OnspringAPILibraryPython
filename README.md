@@ -17,4 +17,31 @@ Interacting with the Onspring API requires a generated key. Keys can be generate
 
 1. In Onspring, navigate to Administration> Security> API Keys.
 2. On the list page, select to create a new key or click on an existing one.
-3. On the details page, expand the _Developer Information_ section. Copy the _X-ApiKey Header_.
+3. On the details page, expand the **Developer Information** section. Copy the **X-ApiKey Header**.
+
+_Important_
+
+- The API Key must also have a status of enabled within the Onspring interface. This option can be found within the details page for the particular API Key.
+- Each API Key within Onspring is associated wtih a role for security measures. The permissions given to the associated role will determine what request types can be made. If a particular request is made and the API Key does not have sufficient permissions assigned, an error will be returned.
+
+## Initial Setup and Coding Examples
+
+This library requires two python dependents before getting started, **requests** and **json**. Both can be obtained via a common pyhton package manager such as pip.
+
+Once the appriate packeages have been installed, everything needed to begin can be found in the client_code_examples.py file. Although a basic understanding of Onspring and its data input requirements is not entirely required, it is greatly recommended. Also, access to an Onspring instance is beneficial for data validation.
+
+To get started:
+
+1. Create a .py file.
+2. Import **requests** and the _OnSpring_ class from the onpsring_api_library_v2.py file.
+3. You will the then need to build an Onspring object to make API calls. Its constructor will requires two inputs:
+
+   - The Onspring API base URL which is https://api.onspring.com/
+   - The generated API key from the Onspring instance.
+
+I will look something like this:
+'''import requests
+
+from onspring_api_library_v2 import Onspring
+
+api = Onspring('https://api.onspring.com/','This is where you would insert your api key')'''
