@@ -1,4 +1,4 @@
-# OnspringAPILibraryPython
+# Onspring API Python Library
 
 This library builds on the Python Requests library to further abstract requests and make working with the Onspring API more accessible via Python. It provides a simplified path for Onspring customers to integrate with an organization's OnSpring instance.
 
