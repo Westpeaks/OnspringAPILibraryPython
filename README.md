@@ -22,13 +22,13 @@ Interacting with the Onspring API requires a generated key. Keys can be generate
 _Important_
 
 - The API Key must also have a status of enabled within the Onspring interface. This option can be found within the details page for the particular API Key.
-- Each API Key within Onspring is associated wtih a role for security measures. The permissions given to the associated role will determine what request types can be made. If a particular request is made and the API Key does not have sufficient permissions assigned, an error will be returned.
+- Each API Key within Onspring is associated with a role for security measures. The permissions given to the associated role will determine what request types can be made. If a particular request is made and the API Key does not have sufficient permissions assigned, an error will be returned.
 
 ## Initial Setup and Coding Examples
 
-This library requires two python dependents before getting started, **requests** and **json**. Both can be obtained via a common pyhton package manager such as pip.
+This library requires two python dependencies before getting started, **requests** and **json**. Both can be obtained via a common pyhton package manager such as pip.
 
-Once the appriate packeages have been installed, everything needed to begin can be found in the client_code_examples.py file. Although a basic understanding of Onspring and its data input requirements is not entirely required, it is greatly recommended. Also, access to an Onspring instance is beneficial for data validation.
+Once the appriate packages have been installed, everything needed to begin can be found in the client_code_examples.py file. Although a basic understanding of Onspring and its data input requirements is not entirely required, it is greatly recommended. Also, access to an Onspring instance is beneficial for data validation.
 
 To get started:
 
@@ -39,7 +39,7 @@ To get started:
    - The Onspring API base URL which is https://api.onspring.com/
    - The generated API key from the Onspring instance.
 
-I will look something like this:
+It will look something like this:
 
 ```python
 import requests
@@ -48,3 +48,7 @@ from onspring_api_library_v2 import Onspring
 
 api = Onspring('https://api.onspring.com/','This is where you would insert your api key')
 ```
+
+Once the Onspring object is built, you can then append calls to it and make standard rest API calls to gather data from an Onspring instance. For a full list of API calls and assistance determining which values to pass as parameters, please counsult the [Onspring v2 API Administrator Guide](https://software.onspring.com/hubfs/Training/Admin%20Guide%20-%20v2%20API.pdf). All examples in pythonic syntax are listed in the client_code_examples.py file and can be copied and pasted into the project you are working on.
+
+Now, let's take a look at a couple of examples. To provide a conceptual framwork for interacting with the Onapring API, the basic structure within Onspring consists of a series of interelated databases (in Onspring, these are called apps) and within those databases, each row represents a record (each column is a field and each row is a record).
