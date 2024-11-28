@@ -41,8 +41,10 @@ To get started:
 
 I will look something like this:
 
-''' import requests
+'''
+import requests
 
 from onspring_api_library_v2 import Onspring
 
-api = Onspring('https://api.onspring.com/','This is where you would insert your api key') '''
+api = Onspring('https://api.onspring.com/','This is where you would insert your api key')
+'''
