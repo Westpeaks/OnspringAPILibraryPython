@@ -49,6 +49,58 @@ from onspring_api_library_v2 import Onspring
 api = Onspring('https://api.onspring.com/','This is where you would insert your api key')
 ```
 
-Once the Onspring object is built, you can then append calls to it and make standard rest API calls to gather data from an Onspring instance. For a full list of API calls and assistance determining which values to pass as parameters, please counsult the [Onspring v2 API Administrator Guide](https://software.onspring.com/hubfs/Training/Admin%20Guide%20-%20v2%20API.pdf). All examples in pythonic syntax are listed in the client_code_examples.py file and can be copied and pasted into the project you are working on.
+Once the Onspring object is built, you can then append calls to it and make standard rest API calls to gather data from an Onspring instance:
 
-Now, let's take a look at a couple of examples. To provide a conceptual framwork for interacting with the Onapring API, the basic structure within Onspring consists of a series of interelated databases (in Onspring, these are called apps) and within those databases, each row represents a record (each column is a field and each row is a record).
+```python
+import requests
+
+from onspring_api_library_v2 import Onspring
+
+api = Onspring('https://api.onspring.com/','000000ffffff000000ffffff/00000000-ffff-0000-ffff-000000000000')
+
+app_id = 24
+record_id = 126
+
+record = api.get_app_record(app_id, record_id)
+
+print(record)
+
+```
+
+For a full list of API calls and assistance determining which values to pass as parameters, please counsult the [Onspring v2 API Administrator Guide](https://software.onspring.com/hubfs/Training/Admin%20Guide%20-%20v2%20API.pdf). All examples of calls in pythonic syntax are listed in the client_code_examples.py file and can be copied and pasted into the project you are working on. The included OnspringAPI.pdf will also provide good examples of what expected returns will look like.
+
+Now, let's take a look at a couple of examples. To provide a conceptual framwork for interacting with the Onspring API, the basic structure within Onspring consists of a series of interelated databases (in Onspring, these are called apps) and within those databases, each row represents a record (each column is a field and each row is a record). Calls will return JSON. Here is an example of getting all fields within an applicaiton:
+
+```python
+import requests
+
+from onspring_api_library_v2 import Onspring
+
+api = Onspring('https://api.onspring.com/','000000ffffff000000ffffff/00000000-ffff-0000-ffff-000000000000')
+
+app_id = 24
+
+app_fields = api.get_fields(app_id)
+
+print (app_fields)
+
+```
+
+Now, as a last example, let's add to this by getting the records associated with those for the same application:
+
+```python
+import requests
+
+from onspring_api_library_v2 import Onspring
+
+api = Onspring('https://api.onspring.com/','000000ffffff000000ffffff/00000000-ffff-0000-ffff-000000000000')
+
+app_id = 24
+
+all_records = api.get_app_records(app_id)
+
+print (all_records)
+
+```
+
+Please feel free to reach out and let me know about potential additions and revisions, Thank you and happy coding!
