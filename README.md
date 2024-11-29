@@ -105,4 +105,4 @@ print (all_records)
 
 ```
 
-Feel free to reach out and let me know about potential additions and revisions, Thank you and happy coding!
+Feel free to reach out and let me know about potential additions and revisions. Thank you and happy coding!
